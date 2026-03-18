@@ -1,3 +1,7 @@
+# This script uses the Faker library to generate synthetic user data and insert it into the users table in batches of 250
+# It handles potential integrity errors due to duplicate usernames or emails by using INSERT OR IGNORE and retrying until the desired number of unique users is inserted
+# The script also ensures all usernames are unique, and that the database schema applies 
+
 """Generate and insert synthetic users into the users table."""
 
 import sqlite3

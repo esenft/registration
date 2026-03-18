@@ -1,3 +1,7 @@
+# This script prompts the user to enter a username to delete
+# If the username exists in the database, it will delete the corresponding user record from the users table
+# If the username does not exist, it will print a warning and not attempt to delete any records
+
 """Delete a user record from the users table by username."""
 
 import sqlite3
@@ -15,6 +19,7 @@ def delete_user_by_username(username: str) -> None:
 		connection = create_sqlite_connection()
 		cursor = connection.cursor()
 
+        # Error handling: if a username is not found in the system, it will print a warning and not attempt to delete any records
 		cursor.execute("SELECT id FROM users WHERE username = ?", (sanitized_username,))
 		if cursor.fetchone() is None:
 			print(f"User '{sanitized_username}' not found. No records were deleted.")

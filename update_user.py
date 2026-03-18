@@ -1,3 +1,8 @@
+# This script allows users to update their email or password in the database
+# It prompts the user to enter their existing username, then select whether they want to update their email or password
+# Depending on the selection, it will prompt for the new value, validate it, and update the corresponding field in the users table
+# The script includes error handling for cases such as the username not being found, the new email already being in use, or database errors
+
 """Update an existing user's email or password in the users table."""
 
 import sqlite3

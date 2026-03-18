@@ -1,3 +1,9 @@
+# This code first creates a Rich console instance for styled outputs.
+# The menu displayed has options 1 through 6 for each CRUD operation and exit.
+# It waits for the user input in a loop.
+# It maps the selected optoin to a function and executes it. 
+# If the user selects "Exit", it will break the loop and end the program.
+
 """Rich-powered CLI menu for user registration CRUD operations."""
 
 import sqlite3

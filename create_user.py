@@ -1,3 +1,10 @@
+# This file adds users to the database we created
+# The user is prompted to enter their username, email, password, city, company, and job title
+# Error handling is included to validate the inputs and ensure the username and email are unique
+# The password is hashed using PBKDF2-HMAC with a random salt for security
+# The password is also rejected if it is not secure enough (with lowercase and uppercase letters, numbers, and at least 8 characters)
+
+
 """Create and insert a user record into the users table."""
 
 from getpass import getpass

@@ -1,3 +1,6 @@
+# This script allows users to view all of the records inside the database
+# It connects to the SQLite database, retrieves all user records from the users table, and displays them in a formatted table in the command line
+
 """Read and display all user records from the users table."""
 
 import sqlite3

@@ -1,3 +1,8 @@
+# I chose to use SQLite over SQL for simplicity and ease of setup.
+# This script creates the SQLite database file and the users table if they don't already exist
+# The database schema is defined, to include the auto-incrementing ID for the primary key
+# The functions read the config from the db.yaml file to get the database name and falls back to users.db if not specified
+
 """Create users.db and ensure the users table exists."""
 
 import sqlite3

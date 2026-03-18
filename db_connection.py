@@ -1,5 +1,11 @@
+# The purpose of this file is to centralize configuration loading and connection management for the SQLite database
+# It connects to SQLite using the settings defined in db.yaml 
+# This allows the other scripts to simply call create_sqlite_connection() without worrying about the underlying details
+
+
 """SQLite connection helper that reads settings from db.yaml."""
 
+# Import required libraries for downstream tasks
 from pathlib import Path
 import sqlite3
 
