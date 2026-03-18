@@ -2,4 +2,4 @@ host: localhost
 user: app_user
 password: app_password
 port: 0
-database: registration.db
+database: users.db
